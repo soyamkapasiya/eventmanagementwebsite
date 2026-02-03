@@ -97,13 +97,14 @@ export default function CinematographyPage() {
         },
       ]}
       gallery={[
-        "/cinematography-hero.jpg",
-        "/gallery-wedding.jpg",
-        "/gallery-corporate.jpg",
-        "/gallery-concert.jpg",
-        "/behind-the-scenes-hero.jpg",
-        "/home-hero.jpg",
+        "/cinematography1.png",
+        "/cinematography2.png",
+        "/cinematography3.png",
+        // "/gallery-concert.jpg",
+        // "/behind-the-scenes-hero.jpg",
+        // "/home-hero.jpg",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

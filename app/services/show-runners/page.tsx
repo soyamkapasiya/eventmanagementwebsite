@@ -94,13 +94,14 @@ export default function ShowRunnersPage() {
         },
       ]}
       gallery={[
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
+        "/show-runner1.jpeg",
+        "/show-runner2.jpeg",
+        "/show-runner3.jpeg",
+        // "/show-runner4.jpeg",
+        // "/show-runner5.jpeg",
+        // "/show-runner6.jpeg",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

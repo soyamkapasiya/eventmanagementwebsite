@@ -95,13 +95,14 @@ export default function BehindTheScenePage() {
         },
       ]}
       gallery={[
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
+        "/behindthescene1.png",
+        "/behindthescene2.png",
+        "/behindthescene3.png",
+        // "/behind-the-scene4.png",
+        // "/behind-the-scene5.png",
+        // "/behind-the-scene6.png",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

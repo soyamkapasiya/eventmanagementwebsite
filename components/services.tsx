@@ -48,6 +48,7 @@ const services = [
     description: "Professional artist management services including bookings, promotions, and career development.",
     image: "/artist-management-hero.jpg",
     href: "/services/artist-management",
+    imageClassName: "object-top",
   },
 ]
 
@@ -86,7 +87,7 @@ export function Services() {
                   <img
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className={cn("w-full h-full object-cover", service.imageClassName)}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
                 </div>
