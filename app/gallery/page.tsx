@@ -7,14 +7,58 @@ import { X, Filter } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-const allGalleryImages = Array(24).fill(null).map((_, i) => ({
-  src: "/placeholder.svg",
-  alt: `Gallery Image ${i + 1}`,
-  category: ["Events", "Choreography", "Behind The Scenes"][i % 3],
-  description: "View detailed gallery image"
-}))
+const allGalleryImages = [
+  // Artist Management
+  { src: "/artist-management-hero.jpg", alt: "Artist Management Hero", category: "Artist Management", description: "Professional artist representation" },
+  { src: "/artist-management1.png", alt: "Artist Management Showcase", category: "Artist Management", description: "Live performance management" },
+  { src: "/artist-management2.png", alt: "Artist Profile", category: "Artist Management", description: "Portfolio shoot" },
+  { src: "/artist-management3.png", alt: "Backstage Artist", category: "Artist Management", description: "Event preparation" },
 
-const categories = ["All", "Events", "Choreography", "Behind The Scenes"]
+  // Behind The Scenes
+  { src: "/behind-the-scenes-hero.jpg", alt: "BTS Hero", category: "Behind The Scenes", description: "Production crew in action" },
+  { src: "/behindthescene1.png", alt: "Set Preparation", category: "Behind The Scenes", description: "Stage setup and lighting" },
+  { src: "/behindthescene2.png", alt: "Camera Crew", category: "Behind The Scenes", description: "Filming in progress" },
+  { src: "/behindthescene3.png", alt: "Production Team", category: "Behind The Scenes", description: "Coordinating the event" },
+
+  // Choreography
+  { src: "/choreography-hero.jpg", alt: "Choreography Hero", category: "Choreography", description: "Dance rehearsal" },
+  { src: "/choreographer-main.jpeg", alt: "Lead Choreographer", category: "Choreography", description: "Directing the moves" },
+  { src: "/choreographer1.png", alt: "Group Dance", category: "Choreography", description: "Synchronized performance" },
+  { src: "/choreographer2.png", alt: "Solo Performance", category: "Choreography", description: "Expressive dance act" },
+  { src: "/choreographer3.png", alt: "Dance Troupe", category: "Choreography", description: "Energy on stage" },
+
+  // Cinematography
+  { src: "/cinematography-hero.jpg", alt: "Cinematography Hero", category: "Cinematography", description: "Capturing the moment" },
+  { src: "/cinematography1.png", alt: "Wedding Shoot", category: "Cinematography", description: "Cinematic wedding highlights" },
+  { src: "/cinematography2.png", alt: "Event Coverage", category: "Cinematography", description: "Professional event filming" },
+  { src: "/cinematography3.png", alt: "Creative Shot", category: "Cinematography", description: "Artistic angles" },
+
+  // Dancers
+  { src: "/dancers-hero.jpg", alt: "Dancers Hero", category: "Dancers", description: "Professional dancers on stage" },
+  { src: "/dancers1.png", alt: "Live Performance", category: "Dancers", description: "Cultural dance event" },
+  { src: "/dancers2.jpeg", alt: "Traditional Dance", category: "Dancers", description: "Classical performance" },
+  { src: "/dancers3.jpeg", alt: "Modern Dance", category: "Dancers", description: "Contemporary style" },
+
+  // Show Runners
+  { src: "/show-runners-hero.jpg", alt: "Show Runners Hero", category: "Show Runners", description: "Event coordination" },
+  { src: "/show-runner1.jpeg", alt: "Event Manager", category: "Show Runners", description: "On-site management" },
+  { src: "/show-runner2.jpeg", alt: "Stage Control", category: "Show Runners", description: "Ensuring smooth flow" },
+  { src: "/show-runner3.jpeg", alt: "Team Coordination", category: "Show Runners", description: "Backstage operations" },
+
+  // General/Home
+  { src: "/home-hero.jpg", alt: "Grand Event", category: "Events", description: "Spectacular event production" },
+]
+
+const categories = [
+  "All",
+  "Artist Management",
+  "Behind The Scenes",
+  "Choreography",
+  "Cinematography",
+  "Dancers",
+  "Show Runners",
+  "Events",
+]
 
 export default function GalleryPage() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
@@ -122,7 +166,7 @@ export default function GalleryPage() {
               <p className="text-muted-foreground">Years of Excellence</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-primary mb-2">40+</p>
+              <p className="text-4xl md:text-5xl font-bold text-primary mb-2">25+</p>
               <p className="text-muted-foreground">Team Members</p>
             </div>
           </div>

@@ -94,13 +94,15 @@ export default function ArtistManagementPage() {
         },
       ]}
       gallery={[
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
+        "/artist-management1.png",
+        "/artist-management2.png",
+        "/artist-management3.png",
+        // "/artist-management4.png",
+        // "/artist-management5.png",
+        // "/artist-management6.png",
+        // "/artist-management7.png",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

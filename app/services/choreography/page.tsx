@@ -95,13 +95,14 @@ export default function ChoreographyPage() {
         },
       ]}
       gallery={[
-        "/gallery-wedding.jpg",
-        "/gallery-corporate.jpg",
-        "/gallery-concert.jpg",
-        "/choreography-hero.jpg",
-        "/dancers-hero.jpg",
-        "/home-hero.jpg",
+        "/choreographer1.png",
+        "/choreographer2.png",
+        "/choreographer3.png",
+        // "/choreography-hero.jpg",
+        // "/dancers-hero.jpg",
+        // "/home-hero.jpg",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

@@ -94,13 +94,14 @@ export default function DancersPage() {
         },
       ]}
       gallery={[
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
-        "/placeholder.svg",
+        "/dancer1.png",
+        "/dancer2.jpeg",
+        "/dancer3.jpeg",
+        // "/dancer4.png",
+        // "/dancer5.png",
+        // "/dancer6.png",
       ]}
+      galleryImageClassName="object-top"
     />
   )
 }

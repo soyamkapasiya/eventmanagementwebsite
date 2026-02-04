@@ -6,6 +6,7 @@ import { ArrowLeft, Phone, Mail, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { cn } from "@/lib/utils"
 
 interface PricingTier {
   name: string
@@ -25,6 +26,8 @@ interface ServicePageLayoutProps {
   pricing: PricingTier[]
   gallery: string[]
   children?: ReactNode
+  galleryImageClassName?: string
+  heroForegroundImage?: string
 }
 
 export function ServicePageLayout({
@@ -36,6 +39,8 @@ export function ServicePageLayout({
   process,
   pricing,
   gallery,
+  galleryImageClassName,
+  heroForegroundImage,
 }: ServicePageLayoutProps) {
   return (
     <main className="min-h-screen bg-background relative">
@@ -68,25 +73,37 @@ export function ServicePageLayout({
               Back to Services
             </Link>
 
-            <div className="max-w-3xl">
-              <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4">{tagline}</p>
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">{title}</h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">{description}</p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  <Link href="/#contact">Get Quote</Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-primary/50 hover:bg-primary/10 bg-transparent"
-                >
-                  <a href="tel:7987763257">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now
-                  </a>
-                </Button>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="max-w-3xl">
+                <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-4">{tagline}</p>
+                <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">{title}</h1>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">{description}</p>
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <Link href="/#contact">Get Quote</Link>
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-primary/50 hover:bg-primary/10 bg-transparent"
+                  >
+                    <a href="tel:7987763257">
+                      <Phone className="w-4 h-4 mr-2" />
+                      Call Now
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Hero Foreground Image */}
+              <div className="hidden lg:block relative aspect-video rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-right-8 duration-700">
+                <img
+                  src={heroForegroundImage || heroImage || "/placeholder.svg"}
+                  alt={`${title} Hero`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
               </div>
             </div>
           </div>
@@ -152,11 +169,18 @@ export function ServicePageLayout({
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {gallery.map((image, index) => (
-                <div key={index} className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer">
+                <div
+                  key={index}
+                  className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-backwards"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                   <img
-                    src={image || "/placeholder.svg"}
+                    src={image || "/behindthescene1.png"}
                     alt={`${title} project ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={cn(
+                      "w-full h-full object-cover transition-transform duration-500 group-hover:scale-110",
+                      galleryImageClassName,
+                    )}
                   />
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
