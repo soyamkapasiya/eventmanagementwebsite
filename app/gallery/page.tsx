@@ -166,7 +166,7 @@ export default function GalleryPage() {
               <p className="text-muted-foreground">Years of Excellence</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold text-primary mb-2">40+</p>
+              <p className="text-4xl md:text-5xl font-bold text-primary mb-2">25+</p>
               <p className="text-muted-foreground">Team Members</p>
             </div>
           </div>

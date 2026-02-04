@@ -6,12 +6,92 @@ import { cn } from "@/lib/utils"
 import { X, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const galleryImages = Array(14).fill(null).map((_, i) => ({
-  src: "/placeholder.svg",
-  alt: `Gallery Image ${i + 1}`,
-  category: ["Events", "Choreography", "Production"][i % 3],
-  description: "View detailed gallery image"
-}))
+const galleryImages = [
+  {
+    src: "/artist-management-hero.jpg",
+    alt: "Artist Management",
+    category: "Artist Management",
+    description: "Professional artist representation"
+  },
+  {
+    src: "/show-runners-hero.jpg",
+    alt: "Show Runners",
+    category: "Show Runners",
+    description: "Event coordination excellence"
+  },
+  {
+    src: "/choreography-hero.jpg",
+    alt: "Choreography",
+    category: "Choreography",
+    description: "Spectacular dance performances"
+  },
+  {
+    src: "/cinematography-hero.jpg",
+    alt: "Cinematography",
+    category: "Cinematography",
+    description: "Capturing every moment"
+  },
+  {
+    src: "/behind-the-scenes-hero.jpg",
+    alt: "Behind The Scenes",
+    category: "Production",
+    description: "The magic behind the curtain"
+  },
+  {
+    src: "/artist-management1.png",
+    alt: "Live Performance",
+    category: "Artist Management",
+    description: "Stage presence and talent"
+  },
+  {
+    src: "/show-runner1.jpeg",
+    alt: "Event Management",
+    category: "Show Runners",
+    description: "Seamless event execution"
+  },
+  {
+    src: "/choreographer-main.jpeg",
+    alt: "Lead Choreographer",
+    category: "Choreography",
+    description: "Creative direction"
+  },
+  {
+    src: "/cinematography1.png",
+    alt: "Wedding Cinema",
+    category: "Cinematography",
+    description: "Beautiful memories captured"
+  },
+  {
+    src: "/behindthescene1.png",
+    alt: "Stage Setup",
+    category: "Production",
+    description: "Setting the scene"
+  },
+  {
+    src: "/artist-management2.png",
+    alt: "Artist Portfolio",
+    category: "Artist Management",
+    description: "Professional managed talent"
+  },
+  {
+    src: "/choreographer1.png",
+    alt: "Group Dance",
+    category: "Choreography",
+    description: "Synchronized perfection"
+  },
+  {
+    src: "/cinematography2.png",
+    alt: "Event Coverage",
+    category: "Cinematography",
+    description: "Professional filming"
+  },
+  {
+    src: "/show-runner2.jpeg",
+    alt: "On-site Coordination",
+    category: "Show Runners",
+    description: "Managing the details"
+  }
+]
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
