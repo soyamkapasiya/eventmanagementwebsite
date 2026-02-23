@@ -49,53 +49,7 @@ export default function CinematographyPage() {
           description: "Final output in your required format with revisions included.",
         },
       ]}
-      pricing={[
-        {
-          name: "Basic",
-          price: "₹25,000",
-          description: "Short form content",
-          features: [
-            "Single camera setup",
-            "4-hour shoot",
-            "Basic editing",
-            "1 minute final cut",
-            "2 revisions",
-            "Social media formats",
-          ],
-        },
-        {
-          name: "Standard",
-          price: "₹60,000",
-          description: "Events & mid-length content",
-          popular: true,
-          features: [
-            "Multi-camera setup",
-            "Full day coverage",
-            "Professional editing",
-            "3-5 minute final cut",
-            "Color grading",
-            "5 revisions",
-            "All format delivery",
-            "Drone shots included",
-          ],
-        },
-        {
-          name: "Premium",
-          price: "₹1,50,000+",
-          description: "Full productions",
-          features: [
-            "Complete film crew",
-            "Multi-day shoots",
-            "Cinema-quality editing",
-            "Unlimited duration",
-            "Advanced VFX",
-            "Professional sound design",
-            "Unlimited revisions",
-            "Raw footage included",
-            "DCP for theatrical release",
-          ],
-        },
-      ]}
+
       gallery={[
         "/cinematography1.png",
         "/cinematography2.png",

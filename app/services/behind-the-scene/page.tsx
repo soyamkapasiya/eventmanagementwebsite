@@ -49,51 +49,7 @@ export default function BehindTheScenePage() {
           description: "Multi-format content ready for various platforms.",
         },
       ]}
-      pricing={[
-        {
-          name: "Basic",
-          price: "₹12,000",
-          description: "Half-day coverage",
-          features: [
-            "Single videographer",
-            "4-hour coverage",
-            "Photo + video",
-            "Quick turnaround",
-            "Social media clips",
-            "50+ edited photos",
-          ],
-        },
-        {
-          name: "Standard",
-          price: "₹30,000",
-          description: "Full production coverage",
-          popular: true,
-          features: [
-            "2-person crew",
-            "Full day coverage",
-            "Interview segments",
-            "3-5 minute BTS video",
-            "200+ edited photos",
-            "Social media package",
-            "Making-of content",
-          ],
-        },
-        {
-          name: "Premium",
-          price: "₹60,000+",
-          description: "Complete documentation",
-          features: [
-            "Full BTS crew",
-            "Multi-day coverage",
-            "Documentary-style edit",
-            "Extended making-of film",
-            "Unlimited photos",
-            "Real-time social updates",
-            "Exclusive interviews",
-            "RAW files included",
-          ],
-        },
-      ]}
+
       gallery={[
         "/behindthescene1.png",
         "/behindthescene2.png",

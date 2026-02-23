@@ -49,50 +49,7 @@ export default function ArtistManagementPage() {
           description: "Continuous evaluation and scaling of your career trajectory.",
         },
       ]}
-      pricing={[
-        {
-          name: "Starter",
-          price: "₹10,000/mo",
-          description: "Emerging artists",
-          features: [
-            "Basic booking assistance",
-            "Event coordination",
-            "Social media guidance",
-            "Monthly consultations",
-            "Portfolio review",
-          ],
-        },
-        {
-          name: "Professional",
-          price: "₹25,000/mo",
-          description: "Established performers",
-          popular: true,
-          features: [
-            "Dedicated manager",
-            "Active booking pursuit",
-            "Brand deal negotiations",
-            "Social media management",
-            "PR & publicity support",
-            "Contract handling",
-            "Weekly check-ins",
-          ],
-        },
-        {
-          name: "Elite",
-          price: "Commission Based",
-          description: "Top-tier artists",
-          features: [
-            "Full-service management",
-            "Exclusive representation",
-            "High-value brand deals",
-            "Tour management",
-            "Complete PR handling",
-            "Legal team access",
-            "Financial planning",
-            "24/7 support",
-          ],
-        },
-      ]}
+
       gallery={[
         "/artist-management1.png",
         "/artist-management2.png",

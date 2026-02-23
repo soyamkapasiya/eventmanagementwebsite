@@ -49,50 +49,7 @@ export default function ShowRunnersPage() {
           description: "Organized event closure, vendor settlement, and post-event report.",
         },
       ]}
-      pricing={[
-        {
-          name: "Small Events",
-          price: "₹15,000",
-          description: "Up to 100 guests",
-          features: [
-            "Single show runner",
-            "4-hour event coverage",
-            "Basic timeline management",
-            "Vendor coordination",
-            "On-site troubleshooting",
-          ],
-        },
-        {
-          name: "Medium Events",
-          price: "₹35,000",
-          description: "100-500 guests",
-          popular: true,
-          features: [
-            "Show runner + assistant",
-            "Full day coverage",
-            "Complete stage management",
-            "Technical coordination",
-            "Artist management",
-            "Detailed run sheet",
-            "Emergency backup plans",
-          ],
-        },
-        {
-          name: "Large Productions",
-          price: "₹75,000+",
-          description: "500+ guests",
-          features: [
-            "Full production team",
-            "Multi-day event support",
-            "Complete backstage crew",
-            "Advanced technical direction",
-            "Multi-stage coordination",
-            "Celebrity/VIP handling",
-            "Security coordination",
-            "Live broadcast support",
-          ],
-        },
-      ]}
+
       gallery={[
         "/show-runner1.jpeg",
         "/show-runner2.jpeg",

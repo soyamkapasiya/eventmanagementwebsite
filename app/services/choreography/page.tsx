@@ -50,50 +50,7 @@ export default function ChoreographyPage() {
           description: "We ensure you're fully prepared and confident for your big moment on stage.",
         },
       ]}
-      pricing={[
-        {
-          name: "Basic",
-          price: "₹15,000",
-          description: "Perfect for small events",
-          features: [
-            "Single song choreography",
-            "Up to 5 participants",
-            "3 rehearsal sessions",
-            "Basic steps & formations",
-            "Video reference provided",
-          ],
-        },
-        {
-          name: "Premium",
-          price: "₹35,000",
-          description: "Ideal for weddings & parties",
-          popular: true,
-          features: [
-            "Up to 3 song medley",
-            "Up to 15 participants",
-            "6 rehearsal sessions",
-            "Complex choreography",
-            "Props & formations",
-            "On-site coordination",
-            "Video documentation",
-          ],
-        },
-        {
-          name: "Professional",
-          price: "₹75,000+",
-          description: "For productions & shows",
-          features: [
-            "Unlimited songs",
-            "Unlimited participants",
-            "Unlimited rehearsals",
-            "Professional dancers included",
-            "Full show direction",
-            "Costume consultation",
-            "Lighting coordination",
-            "Complete event management",
-          ],
-        },
-      ]}
+
       gallery={[
         "/choreographer1.png",
         "/choreographer2.png",

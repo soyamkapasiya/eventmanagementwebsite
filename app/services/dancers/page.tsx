@@ -49,50 +49,7 @@ export default function DancersPage() {
           description: "Professional delivery with coordinated costumes and flawless execution.",
         },
       ]}
-      pricing={[
-        {
-          name: "Solo/Duo",
-          price: "₹8,000",
-          description: "Per dancer, per event",
-          features: [
-            "1-2 professional dancers",
-            "Single performance slot",
-            "Standard choreography",
-            "Basic costumes included",
-            "2-hour event coverage",
-            "Basic costumes included",
-          ],
-        },
-        {
-          name: "Group (4-6)",
-          price: "₹25,000",
-          description: "Small group performances",
-          popular: true,
-          features: [
-            "4-6 professional dancers",
-            "Up to 2 performance slots",
-            "Custom choreography",
-            "Theme-based costumes",
-            "Full event presence",
-            "Coordination with DJ/band",
-          ],
-        },
-        {
-          name: "Troupe (8+)",
-          price: "₹50,000+",
-          description: "Large scale productions",
-          features: [
-            "8+ professional dancers",
-            "Multiple performance slots",
-            "Complex choreography",
-            "Premium costumes",
-            "Full production support",
-            "Stage management",
-            "Backup dancers included",
-            "Travel & accommodation",
-          ],
-        },
-      ]}
+
       gallery={[
         "/dancers1.png",
         "/dancers2.jpeg",

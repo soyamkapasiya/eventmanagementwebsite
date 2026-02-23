@@ -8,13 +8,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { cn } from "@/lib/utils"
 
-interface PricingTier {
-  name: string
-  price: string
-  description: string
-  features: string[]
-  popular?: boolean
-}
+
 
 interface ServicePageLayoutProps {
   title: string
@@ -23,7 +17,7 @@ interface ServicePageLayoutProps {
   heroImage: string
   features: string[]
   process: { step: number; title: string; description: string }[]
-  pricing: PricingTier[]
+
   gallery: string[]
   children?: ReactNode
   galleryImageClassName?: string
@@ -37,7 +31,7 @@ export function ServicePageLayout({
   heroImage,
   features,
   process,
-  pricing,
+
   gallery,
   galleryImageClassName,
   heroForegroundImage,
@@ -157,62 +151,7 @@ export function ServicePageLayout({
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-24 bg-card/30 relative overflow-hidden">
-          <div className="absolute top-1/2 left-0 w-96 h-96 bg-primary/5 blur-[120px] rounded-full -z-10" />
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="text-center mb-16">
-              <p className="text-primary font-bold tracking-[0.4em] uppercase text-xs mb-4">Investment</p>
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">Service Packages</h2>
-              <div className="w-20 h-1 bg-primary/30 mx-auto mb-8 rounded-full" />
-            </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricing.map((tier, index) => (
-                <div
-                  key={index}
-                  className={cn(
-                    "relative p-8 rounded-[2.5rem] border transition-all duration-500",
-                    tier.popular
-                      ? "bg-primary/10 border-primary/30 shadow-2xl shadow-primary/10 scale-105 z-10"
-                      : "bg-white/5 border-white/10 hover:border-white/20"
-                  )}
-                >
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full shadow-lg">
-                      Most Popular
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold text-foreground mb-2">{tier.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-4">
-                    <span className="text-3xl font-black text-primary">{tier.price}</span>
-                  </div>
-                  <p className="text-white/40 text-sm mb-8">{tier.description}</p>
-                  <div className="space-y-4 mb-10">
-                    {tier.features.map((feature, fIndex) => (
-                      <div key={fIndex} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                        <span className="text-white/60 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Button
-                    asChild
-                    variant={tier.popular ? "default" : "outline"}
-                    className={cn(
-                      "w-full rounded-2xl py-6 font-bold",
-                      tier.popular
-                        ? "bg-primary text-primary-foreground"
-                        : "border-white/10 hover:bg-white/5"
-                    )}
-                  >
-                    <Link href="/#contact">Choose {tier.name}</Link>
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
         {/* Gallery Section */}
         <section className="py-24">
           <div className="container mx-auto px-4 lg:px-8">
