@@ -4,40 +4,45 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Dark theme as default for entertainment brand */
-  --background: oklch(0.08 0 0);
+  /* Royal Blue theme inspired by rjentertainment.in */
+  --background: oklch(0.12 0.04 250);
+  /* Deep Royal Blue */
   --foreground: oklch(0.98 0 0);
-  --card: oklch(0.12 0 0);
+  --card: oklch(0.15 0.05 250);
+  /* Slightly lighter Royal Blue */
   --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.12 0 0);
+  --popover: oklch(0.12 0.04 250);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.75 0.18 60);
-  --primary-foreground: oklch(0.08 0 0);
-  --secondary: oklch(0.18 0 0);
+  --primary: oklch(0.85 0.15 80);
+  /* Gold/Amber */
+  --primary-foreground: oklch(0.12 0.04 250);
+  --secondary: oklch(0.18 0.06 250);
+  /* Lighter Blue */
   --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.2 0 0);
-  --muted-foreground: oklch(0.6 0 0);
-  --accent: oklch(0.75 0.18 60);
-  --accent-foreground: oklch(0.08 0 0);
+  --muted: oklch(0.2 0.05 250);
+  --muted-foreground: oklch(0.7 0.02 250);
+  --accent: oklch(0.85 0.15 80);
+  --accent-foreground: oklch(0.12 0.04 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.18 0 0);
-  --ring: oklch(0.75 0.18 60);
-  --chart-1: oklch(0.75 0.18 60);
+  --border: oklch(0.25 0.05 250);
+  --input: oklch(0.18 0.06 250);
+  --ring: oklch(0.85 0.15 80);
+  --chart-1: oklch(0.85 0.15 80);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.1 0 0);
+  --radius: 1rem;
+  /* Increased radius for modern look */
+  --sidebar: oklch(0.1 0.04 250);
   --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.75 0.18 60);
-  --sidebar-primary-foreground: oklch(0.08 0 0);
-  --sidebar-accent: oklch(0.18 0 0);
+  --sidebar-primary: oklch(0.85 0.15 80);
+  --sidebar-primary-foreground: oklch(0.12 0.04 250);
+  --sidebar-accent: oklch(0.18 0.06 250);
   --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.75 0.18 60);
+  --sidebar-border: oklch(0.25 0.05 250);
+  --sidebar-ring: oklch(0.85 0.15 80);
 }
 
 @theme inline {
@@ -85,6 +90,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -95,6 +101,7 @@
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -104,6 +111,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0%);
   }
@@ -118,10 +126,12 @@
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -129,6 +139,24 @@
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
 }
 
 /* Smooth scroll */
@@ -140,10 +168,12 @@ html {
 
 /* Pulse glow effect for letters */
 @keyframes pulse-glow {
+
   0%,
   100% {
     text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary), 0 0 15px var(--primary);
   }
+
   50% {
     text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary), 0 0 40px var(--primary);
   }
@@ -155,11 +185,13 @@ html {
 
 /* Slow pulse for background glow */
 @keyframes pulse-slow {
+
   0%,
   100% {
     opacity: 0.3;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(1.1);
@@ -172,13 +204,16 @@ html {
 
 /* Wave animation for letters */
 @keyframes wave {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   25% {
     transform: translateY(-3px);
   }
+
   75% {
     transform: translateY(3px);
   }
@@ -193,20 +228,19 @@ html {
   0% {
     background-position: -200% center;
   }
+
   100% {
     background-position: 200% center;
   }
 }
 
 .animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    var(--primary) 0%,
-    oklch(0.85 0.2 60) 25%,
-    var(--primary) 50%,
-    oklch(0.85 0.2 60) 75%,
-    var(--primary) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--primary) 0%,
+      oklch(0.85 0.2 60) 25%,
+      var(--primary) 50%,
+      oklch(0.85 0.2 60) 75%,
+      var(--primary) 100%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -215,10 +249,12 @@ html {
 
 /* Letter bounce animation */
 @keyframes letter-bounce {
+
   0%,
   100% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-8px) scale(1.05);
   }
@@ -233,15 +269,19 @@ html {
   0% {
     transform: translateY(0) rotate(0deg);
   }
+
   25% {
     transform: translateY(-12px) rotate(-5deg);
   }
+
   50% {
     transform: translateY(-6px) rotate(5deg);
   }
+
   75% {
     transform: translateY(-10px) rotate(-3deg);
   }
+
   100% {
     transform: translateY(0) rotate(0deg);
   }
@@ -253,10 +293,12 @@ html {
 
 /* Glow pulse for individual letters */
 @keyframes glow-pulse {
+
   0%,
   100% {
     filter: drop-shadow(0 0 2px var(--primary));
   }
+
   50% {
     filter: drop-shadow(0 0 8px var(--primary)) drop-shadow(0 0 15px var(--primary));
   }
@@ -268,11 +310,13 @@ html {
 
 /* Expanding glow effect */
 @keyframes glow-expand {
+
   0%,
   100% {
     transform: scale(0.8);
     opacity: 0.2;
   }
+
   50% {
     transform: scale(1.2);
     opacity: 0.5;
@@ -290,14 +334,17 @@ html {
     transform: translateY(20px) rotateX(90deg);
     filter: blur(10px);
   }
+
   60% {
     opacity: 1;
     transform: translateY(-5px) rotateX(0deg);
     filter: blur(0);
   }
+
   80% {
     transform: translateY(3px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) rotateX(0deg);
@@ -316,9 +363,11 @@ html {
     width: 0;
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     width: 200px;
     opacity: 1;
@@ -336,6 +385,7 @@ html {
     transform: scale(0.5);
     filter: blur(20px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -352,6 +402,7 @@ html {
   0% {
     background-size: 0% 100%;
   }
+
   100% {
     background-size: 100% 100%;
   }
@@ -359,11 +410,13 @@ html {
 
 /* Sparkle effect */
 @keyframes sparkle {
+
   0%,
   100% {
     opacity: 0;
     transform: scale(0);
   }
+
   50% {
     opacity: 1;
     transform: scale(1);
@@ -379,6 +432,7 @@ html {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -392,10 +446,12 @@ html {
 
 /* Subtle float animation for merged text */
 @keyframes subtle-float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-2px);
   }
@@ -411,10 +467,12 @@ html {
     opacity: 0;
     transform: scaleX(0);
   }
+
   30% {
     opacity: 1;
     transform: scaleX(1.2);
   }
+
   100% {
     opacity: 0;
     transform: scaleX(2);
@@ -427,13 +485,16 @@ html {
     transform: translateX(-100vw);
     opacity: 0;
   }
+
   70% {
     transform: translateX(10px);
     opacity: 1;
   }
+
   85% {
     transform: translateX(-5px);
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -450,13 +511,16 @@ html {
     transform: translateX(100vw);
     opacity: 0;
   }
+
   70% {
     transform: translateX(-10px);
     opacity: 1;
   }
+
   85% {
     transform: translateX(5px);
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -469,31 +533,40 @@ html {
 
 /* Impact shake when elements merge */
 @keyframes impact-shake {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   10% {
     transform: translateX(-4px) rotate(-1deg);
   }
+
   20% {
     transform: translateX(4px) rotate(1deg);
   }
+
   30% {
     transform: translateX(-3px) rotate(-0.5deg);
   }
+
   40% {
     transform: translateX(3px) rotate(0.5deg);
   }
+
   50% {
     transform: translateX(-2px);
   }
+
   60% {
     transform: translateX(2px);
   }
+
   70% {
     transform: translateX(-1px);
   }
+
   80% {
     transform: translateX(1px);
   }
@@ -509,10 +582,12 @@ html {
     transform: scale(0);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.5);
     opacity: 0.8;
   }
+
   100% {
     transform: scale(2);
     opacity: 0;

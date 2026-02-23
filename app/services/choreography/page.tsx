@@ -15,11 +15,11 @@ export default function ChoreographyPage() {
       heroImage="/choreography-hero.jpg"
       features={[
         "Wedding first dance choreography",
-        "Sangeet & mehendi dance routines",
+        "Wedding celebration dance routines",
         "Corporate event flash mobs",
         "Music video choreography",
         "Stage show direction",
-        "Bollywood dance sequences",
+        "Cinematic Bollywood dance sequences",
         "Western contemporary styles",
         "Group synchronization",
         "Solo performance coaching",
@@ -98,9 +98,9 @@ export default function ChoreographyPage() {
         "/choreographer1.png",
         "/choreographer2.png",
         "/choreographer3.png",
-        // "/choreography-hero.jpg",
-        // "/dancers-hero.jpg",
-        // "/home-hero.jpg",
+        "/dancers1.png",
+        "/home-hero.jpg",
+        "/choreography-hero.jpg",
       ]}
       galleryImageClassName="object-top"
     />

@@ -4,18 +4,18 @@ interface MarqueeTextProps {
 
 const services = [
   "Choreography",
-  "Dancers",
+  "Dance Performance",
   "Artist Management",
-  "Cinematographer",
+  "Cinematography",
   "Show Runners",
-  "Behind The Scene",
+  "Behind The Scenes",
   "Event Production",
   "Post Production",
 ]
 
 export function MarqueeText({ reverse = false }: MarqueeTextProps) {
   return (
-    <div className="py-6 bg-secondary overflow-hidden border-y border-border">
+    <div className="py-10 bg-secondary overflow-hidden border-y border-border">
       <div className={`flex whitespace-nowrap ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}>
         {[...services, ...services].map((service, index) => (
           <span

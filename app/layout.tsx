@@ -20,7 +20,11 @@ export const metadata: Metadata = {
     "PJ Entertainment",
     "Pratham Purohit",
   ],
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 }
 
 export default function RootLayout({

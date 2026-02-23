@@ -1,7 +1,7 @@
 import { ServicePageLayout } from "@/components/service-page-layout"
 
 export const metadata = {
-  title: "Behind The Scene Coverage | PJ Entertainment",
+  title: "Behind The Scenes Coverage | PJ Entertainment",
   description:
     "Professional behind-the-scenes documentation for films, events, and productions. Capture the magic of making.",
 }
@@ -9,7 +9,7 @@ export const metadata = {
 export default function BehindTheScenePage() {
   return (
     <ServicePageLayout
-      title="Behind The Scene"
+      title="Behind The Scenes"
       tagline="Capture The Magic"
       description="Document the journey behind your productions. Our BTS team captures the raw moments, hard work, and creativity that goes into making your project, creating valuable content for marketing and memories."
       heroImage="/behind-the-scenes-hero.jpg"
@@ -98,9 +98,9 @@ export default function BehindTheScenePage() {
         "/behindthescene1.png",
         "/behindthescene2.png",
         "/behindthescene3.png",
-        // "/behind-the-scene4.png",
-        // "/behind-the-scene5.png",
-        // "/behind-the-scene6.png",
+        "/home-hero.jpg",
+        "/behind-the-scenes-hero.jpg",
+        "/cinematography1.png",
       ]}
       galleryImageClassName="object-top"
     />

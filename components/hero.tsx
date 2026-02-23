@@ -26,32 +26,38 @@ export function Hero() {
         <img
           src="/home-hero.jpg"
           alt="Entertainment background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover scale-105 animate-subtle-float"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        {/* Deep Royal Blue Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/70 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.1)_0%,transparent_70%)]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center">
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 text-center pt-20">
         <div
           className={`transition-all duration-1000 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
         >
           {/* Tagline */}
-          <p className="text-primary font-medium tracking-[0.3em] uppercase text-sm mb-6">
-            Creating Moments. Inspiring Movements.
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="h-px w-12 bg-primary/50" />
+            <p className="text-primary font-bold tracking-[0.4em] uppercase text-xs sm:text-sm">
+              Creating Moments. Inspiring Movements.
+            </p>
+            <div className="h-px w-12 bg-primary/50" />
+          </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-4 tracking-tight relative">
+          <h1 className="text-5xl md:text-7xl lg:text-9xl font-extrabold text-foreground mb-6 tracking-tight relative leading-tight">
             {/* Container for the merge animation */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-x-6 gap-y-2">
               {/* PJ - slides in from left */}
               <span
-                className={`relative inline-block transition-all duration-1000 ease-out ${mounted
-                    ? merged
-                      ? "translate-x-0 opacity-100"
-                      : "translate-x-0 opacity-100 md:-translate-x-8"
-                    : "-translate-x-[100vw] opacity-0"
+                className={`relative inline-block transition-all duration-1000 ease-out py-2 ${mounted
+                  ? merged
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-0 opacity-100 md:-translate-x-12"
+                  : "-translate-x-[100vw] opacity-0"
                   }`}
               >
                 <span className="inline-block text-primary relative">
@@ -62,7 +68,7 @@ export function Hero() {
                         }`}
                       style={{
                         animationDelay: `${index * 0.1}s`,
-                        textShadow: merged ? "0 0 20px hsl(var(--primary)), 0 0 40px hsl(var(--primary)/0.5)" : "none",
+                        textShadow: merged ? "0 0 30px oklch(0.85 0.15 80 / 0.6), 0 0 60px oklch(0.85 0.15 80 / 0.3)" : "none",
                       }}
                     >
                       {letter}
@@ -71,18 +77,17 @@ export function Hero() {
                 </span>
                 {/* Glow trail effect */}
                 <span
-                  className={`absolute inset-0 blur-2xl bg-primary/40 -z-10 transition-opacity duration-500 ${mounted && !merged ? "opacity-100" : "opacity-50"
+                  className={`absolute inset-0 blur-3xl bg-primary/30 -z-10 transition-opacity duration-700 ${mounted && !merged ? "opacity-100" : "opacity-40"
                     }`}
                 />
               </span>
 
-              {/* Entertainment - slides in from right */}
               <span
                 className={`inline-block transition-all duration-1000 ease-out ${mounted
-                    ? merged
-                      ? "translate-x-0 opacity-100"
-                      : "translate-x-0 opacity-100 md:translate-x-8"
-                    : "translate-x-[100vw] opacity-0"
+                  ? merged
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-0 opacity-100 md:translate-x-12"
+                  : "translate-x-[100vw] opacity-0"
                   }`}
               >
                 {entertainmentText.split("").map((letter, index) => (
@@ -99,37 +104,28 @@ export function Hero() {
                 ))}
               </span>
             </div>
-
-            {/* Merge flash effect */}
-            <div
-              className={`absolute inset-0 bg-gradient-to-r from-transparent via-primary/30 to-transparent pointer-events-none transition-opacity duration-300 ${merged ? "opacity-0" : "opacity-0"
-                }`}
-              style={{
-                animation: merged ? "merge-flash 0.5s ease-out" : "none",
-              }}
-            />
           </h1>
 
           {/* Animated underline that expands after merge */}
-          <div className="relative h-1 mx-auto mb-6 overflow-hidden">
+          <div className="relative h-px mx-auto mb-10 overflow-hidden">
             <div
-              className={`h-full bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-700 ease-out mx-auto ${merged ? "w-64 md:w-96 opacity-100" : "w-0 opacity-0"
+              className={`h-full bg-gradient-to-r from-transparent via-primary to-transparent transition-all duration-1000 ease-out mx-auto ${merged ? "w-80 md:w-[600px] opacity-100" : "w-0 opacity-0"
                 }`}
             />
           </div>
 
           {/* Description */}
-          <p className="text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-            All type of event management services - from choreography and dancers to cinematography, artist management,
-            and beyond.
+          <p className="text-white/60 max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed font-medium">
+            India's premier event management agency specializing in choreography,
+            cinematography, and star-studded entertainment experiences.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Button
               asChild
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg"
+              className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-10 py-8 text-lg font-bold shadow-2xl shadow-primary/20 hover:scale-105 transition-all"
             >
               <Link href="#contact">Start Your Project</Link>
             </Button>
@@ -137,10 +133,10 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="border-border text-foreground hover:bg-secondary px-8 py-6 text-lg bg-transparent"
+              className="rounded-full border-white/20 text-white hover:bg-white/10 px-10 py-8 text-lg font-bold bg-transparent backdrop-blur-md hover:scale-105 transition-all"
             >
-              <Link href="#services" className="flex items-center gap-2">
-                <Play className="w-5 h-5" />
+              <Link href="#services" className="flex items-center gap-3">
+                <Play className="w-5 h-5 fill-current" />
                 Explore Services
               </Link>
             </Button>
@@ -168,6 +164,13 @@ export function Hero() {
       <div
         className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-primary/30 rounded-full animate-float"
         style={{ animationDelay: "2s" }}
+      />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-3.5 h-3.5 bg-primary/20 rounded-full animate-float"
+        style={{ animationDelay: "1.5s" }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[150px] rounded-full -z-10 animate-pulse-slow"
       />
     </section>
   )

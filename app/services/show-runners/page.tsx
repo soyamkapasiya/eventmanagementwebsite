@@ -97,9 +97,9 @@ export default function ShowRunnersPage() {
         "/show-runner1.jpeg",
         "/show-runner2.jpeg",
         "/show-runner3.jpeg",
-        // "/show-runner4.jpeg",
-        // "/show-runner5.jpeg",
-        // "/show-runner6.jpeg",
+        "/home-hero.jpg",
+        "/show-runners-hero.jpg",
+        "/behindthescene3.png",
       ]}
       galleryImageClassName="object-top"
     />

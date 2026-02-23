@@ -1,7 +1,7 @@
 import { ServicePageLayout } from "@/components/service-page-layout"
 
 export const metadata = {
-  title: "Professional Dancers | PJ Entertainment",
+  title: "Professional Dance Performance | PJ Entertainment",
   description:
     "Hire talented professional dancers for events, music videos, corporate shows, and live performances. Trained in multiple dance styles.",
 }
@@ -9,7 +9,7 @@ export const metadata = {
 export default function DancersPage() {
   return (
     <ServicePageLayout
-      title="Dancers"
+      title="Dance Performance"
       tagline="Talent On Demand"
       description="Access our roster of professionally trained dancers for any occasion. From elegant classical performances to high-energy Bollywood numbers, our dancers bring passion, precision, and professionalism to every performance."
       heroImage="/dancers-hero.jpg"
@@ -94,12 +94,12 @@ export default function DancersPage() {
         },
       ]}
       gallery={[
-        "/dancer1.png",
-        "/dancer2.jpeg",
-        "/dancer3.jpeg",
-        // "/dancer4.png",
-        // "/dancer5.png",
-        // "/dancer6.png",
+        "/dancers1.png",
+        "/dancers2.jpeg",
+        "/dancers3.jpeg",
+        "/home-hero.jpg",
+        "/choreography-hero.jpg",
+        "/behindthescene1.png",
       ]}
       galleryImageClassName="object-top"
     />

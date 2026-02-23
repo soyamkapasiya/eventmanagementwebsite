@@ -100,9 +100,9 @@ export default function CinematographyPage() {
         "/cinematography1.png",
         "/cinematography2.png",
         "/cinematography3.png",
-        // "/gallery-concert.jpg",
-        // "/behind-the-scenes-hero.jpg",
-        // "/home-hero.jpg",
+        "/home-hero.jpg",
+        "/cinematography-hero.jpg",
+        "/behindthescene2.png",
       ]}
       galleryImageClassName="object-top"
     />

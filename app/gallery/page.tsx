@@ -111,32 +111,30 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="py-16">
+      {/* Gallery Grid Section */}
+      <section className="py-16 pb-32">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
             {filteredImages.map((image, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-xl cursor-pointer group aspect-[4/3]"
+                className="relative overflow-hidden rounded-[2rem] border border-white/5 cursor-pointer group break-inside-avoid shadow-xl transition-all duration-500 hover:border-primary/40 hover:scale-[1.01]"
                 onClick={() => setSelectedImage(allGalleryImages.indexOf(image))}
               >
                 <img
                   src={image.src || "/placeholder.svg"}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="inline-block px-3 py-1 text-xs font-medium text-primary bg-primary/10 rounded-full mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px]">
+                  <div className="absolute inset-0 p-8 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span className="inline-block px-3 py-1 text-[10px] font-black uppercase tracking-[0.2em] text-primary bg-primary/10 rounded-full mb-3 w-fit">
                       {image.category}
                     </span>
-                    <h3 className="text-foreground font-semibold text-lg">{image.alt}</h3>
-                    <p className="text-muted-foreground text-sm">{image.description}</p>
+                    <h3 className="text-foreground font-bold text-xl mb-2">{image.alt}</h3>
+                    <p className="text-white/60 text-sm font-medium line-clamp-2">{image.description}</p>
                   </div>
                 </div>
-                {/* Subtle border on hover */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-primary/50 rounded-xl transition-colors duration-300" />
               </div>
             ))}
           </div>

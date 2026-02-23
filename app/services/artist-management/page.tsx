@@ -97,10 +97,9 @@ export default function ArtistManagementPage() {
         "/artist-management1.png",
         "/artist-management2.png",
         "/artist-management3.png",
-        // "/artist-management4.png",
-        // "/artist-management5.png",
-        // "/artist-management6.png",
-        // "/artist-management7.png",
+        "/home-hero.jpg",
+        "/artist-management-hero.jpg",
+        "/choreographer1.png",
       ]}
       galleryImageClassName="object-top"
     />
